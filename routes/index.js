@@ -5,7 +5,7 @@ var InventoryItem = require('../db/models/inventoryModel.js')
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Crystal Report Parser' });
+  res.render('index', { title: 'Stoller Inventory Search' });
 });
 
 router.post('/', function(req, res) {
@@ -45,6 +45,7 @@ router.post('/', function(req, res) {
       //replace old with cleaned
       result[i] = cleanedObj;
     };
+
     res.send(result);
   })
 
