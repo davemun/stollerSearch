@@ -1,0 +1,82 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+  form(action='/',method='post', id="search")
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='ITEMNMBR1') ITEMNMBR1
+           input(id='ITEMNMBR1',type='text',value='',placeholder='',name='ITEMNMBR1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='ITEMDESC1') ITEMDESC1
+           input(id='ITEMDESC1',type='text',value='',placeholder='',name='ITEMDESC1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='USCATVLS11') USCATVLS11
+           input(id='USCATVLS11',type='text',value='',placeholder='',name='USCATVLS11')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='EQUOMQTY1') EQUOMQTY1
+           input(id='EQUOMQTY1',type='text',value='',placeholder='',name='EQUOMQTY1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='QOO1') QOO1
+           input(id='QOO1',type='text',value='',placeholder='',name='QOO1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='WH11') WH11
+           input(id='WH11',type='text',value='',placeholder='',name='WH11')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='WH21') WH21
+           input(id='WH21',type='text',value='',placeholder='',name='WH21')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='FF1') FF1
+           input(id='FF1',type='text',value='',placeholder='',name='FF1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='WH31') WH31
+           input(id='WH31',type='text',value='',placeholder='',name='WH31')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='BOT1') BOT1
+           input(id='BOT1',type='text',value='',placeholder='',name='BOT1')
+
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='CaseBot1') CaseBot1
+           input(id='CaseBot1',type='text',value='',placeholder='',name='CaseBot1')
+
+    div(data-role='fieldcontain')   
+      input(type='submit', id='submit', value='Find Inventory Item',data-transition='fade', data-theme='c')
+
+    div
+      table(style="width:100%", id="results")
+        tr(id="header")
+          td ITEMNMBR1
+          td ITEMDESC1
+          td USCATVLS11
+          td EQUOMQTY1
+          td QOO1
+          td WH11
+          td WH21
+          td FF1
+          td WH31
+          td BOT1
+          td CaseBot1
+        tr
+      table

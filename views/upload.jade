@@ -1,0 +1,18 @@
+extends uploadLayout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div(id='prompt')
+  div
+    label(for="fileselect") Files to upload:
+    input(type="file", id="fileselect", name="fileselect[]", multiple="multiple")
+    div(id="filedrag") or drop files here
+
+
+  div(id='messages')
+    p messages
+
+  div(id="submitbutton")
+    button(type="submit") Upload Files
