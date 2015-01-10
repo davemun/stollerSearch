@@ -24,7 +24,6 @@ router.post('/', function(req, res) {
 
   InventoryItem.find(req.body, function (err, result) {
     if (err) console.log(err);
-    console.log(JSON.stringify(result));
 
     //clean out secret attrs in obj before return to client
     for(var i = 0; i < result.length; i++){
@@ -37,8 +36,8 @@ router.post('/', function(req, res) {
           QOO1: result[i].QOO1,
           WH11: result[i].WH11,
           WH21: result[i].WH21,
-          FF1: result[i].FF1,
           WH31: result[i].WH31,
+          FF1: result[i].FF1,
           BOT1: result[i].BOT1,
           CaseBot1: result[i].CaseBot1,
         };

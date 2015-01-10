@@ -30,20 +30,34 @@ $(function () {
       var mytbl = document.getElementById("results");
       mytbl.getElementsByTagName("tbody")[0].innerHTML = mytbl.rows[0].innerHTML;
 
+        var fieldList =           
+          [
+          'ITEMNMBR1',
+          'ITEMDESC1',
+          'USCATVLS11',
+          'EQUOMQTY1',
+          'QOO1',
+          'WH11',
+          'WH21',
+          'WH31',
+          'FF1',
+          'BOT1',
+          'CaseBot1'
+          ];
 
       data.forEach(function(invItem){
         //construct a new row for each invventory item
         var node = $('<tr></tr>');
 
-        //for every field in each inventory item
-        for(field in invItem){
+        //for every field in fieldList
+        fieldList.forEach(function(field){
           //construct new column
           var itemField = $('<td></td>');
           //fill new column with item attributes
           itemField.text(invItem[field]);
           //put new column into table row
           node.append(itemField);
-        }
+        })
 
         //put row result into the DOM
         $('#results').append(node);
