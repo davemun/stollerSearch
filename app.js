@@ -30,7 +30,7 @@ app.use('/', routes);
 app.use('/upload', upload);
 
 ///MONGOOSE HANDLER
-mongoose.connect("mongodb://crystalParser:kittyspy1734@ds031581.mongolab.com:31581/crystal-reports");
+mongoose.connect("");
 //MONGOOSE HANDLER
 
 /// catch 404 and forward to error handler
